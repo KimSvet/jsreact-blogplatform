@@ -1,0 +1,23 @@
+.article-author {
+  display: flex;
+}
+
+.author-name {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  margin: 0;
+}
+
+.created-date {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  margin: 0;
+}
+
+.text-container {
+  margin-right: 12px;
+}

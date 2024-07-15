@@ -1,0 +1,44 @@
+.root-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: #ebeef3;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > * {
+  margin: 22px;
+  color: black;
+}
+
+.nav_home {
+  margin-right: auto;
+}
+
+.nav_signup {
+  color: #52c41a;
+}
+
+.signup-button-container {
+  border: #52c41a solid 1px;
+  border-radius: 3px;
+  padding: 6px 18px;
+}

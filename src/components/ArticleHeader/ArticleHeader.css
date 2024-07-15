@@ -1,0 +1,37 @@
+h5 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  color: #1890ff;
+  margin-right: 13px;
+  margin: 0;
+}
+
+.likes-count {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  margin: 0px;
+  margin-left: 13px;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.article-header_name {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-list {
+  display: flex;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+}

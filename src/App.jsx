@@ -9,9 +9,9 @@ import {
 import "./App.css";
 
 //pages
-import List from "./pages/List";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
+import List from "./pages/List/List";
+import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
