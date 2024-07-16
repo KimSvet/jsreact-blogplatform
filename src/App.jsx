@@ -1,3 +1,4 @@
+import React, { Suspense, lazy } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,17 +10,29 @@ import {
 import "./App.css";
 
 //pages
-import List, { articleLoader } from "./pages/List/List";
+const List = lazy(() => import("./pages/List/List"));
+import { articleLoader } from "./pages/List/List";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
 
+//loader
+import Loader from "./components/Loader/Loader";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<List />} loader={articleLoader} />
+      <Route
+        index
+        element={
+          <Suspense fallback={<Loader />}>
+            <List />
+          </Suspense>
+        }
+        loader={articleLoader}
+      />
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
     </Route>
