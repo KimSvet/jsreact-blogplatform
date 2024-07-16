@@ -1,5 +1,6 @@
 .article-author {
   display: flex;
+  width: 145px;
 }
 
 .author-name {
@@ -20,4 +21,19 @@
 
 .text-container {
   margin-right: 12px;
+}
+
+.avatar-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-image {
+  object-fit: cover;
+  border-radius: 50%;
 }

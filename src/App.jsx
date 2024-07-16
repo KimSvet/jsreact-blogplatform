@@ -9,7 +9,7 @@ import {
 import "./App.css";
 
 //pages
-import List from "./pages/List/List";
+import List, { articleLoader } from "./pages/List/List";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 
@@ -19,7 +19,7 @@ import RootLayout from "./layouts/RootLayout";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
-      <Route index element={<List />} />
+      <Route index element={<List />} loader={articleLoader} />
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
     </Route>

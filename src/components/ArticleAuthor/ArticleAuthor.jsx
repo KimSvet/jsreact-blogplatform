@@ -4,15 +4,22 @@ import "./ArticleAuthor.css";
 
 import profilePicture from "../../assets/profile-picture.png";
 
-export default function ArticleAuthor() {
+export default function ArticleAuthor({ author, date }) {
+  const createdDate = new Date(date);
+  const format = { year: "numeric", month: "long", day: "numeric" };
+  const formatDate = createdDate.toLocaleDateString("en-US", format);
   return (
     <div className="article-author">
       <div className="text-container">
-        <p className="author-name">John Doe</p>
-        <p className="created-date">March 5, 2020</p>
+        <p className="author-name">{author.username}</p>
+        <p className="created-date">{formatDate}</p>
       </div>
       <div className="avatar-container">
-        <img src={profilePicture} alt="profile picture" />
+        <img
+          src={author.image}
+          alt="profile picture"
+          className="avatar-image"
+        />
       </div>
     </div>
   );

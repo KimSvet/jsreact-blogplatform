@@ -42,3 +42,7 @@ nav > * {
   border-radius: 3px;
   padding: 6px 18px;
 }
+
+.nav_signup:hover {
+  opacity: 80%;
+}

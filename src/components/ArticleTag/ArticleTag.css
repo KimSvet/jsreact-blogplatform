@@ -4,5 +4,11 @@
   line-height: 14.52px;
   text-align: left;
   border: 1px solid #00000080;
+  opacity: 50%;
   border-radius: 1px;
+  margin-right: 5px;
+}
+
+.article-tag:first-child {
+  opacity: 100%;
 }
