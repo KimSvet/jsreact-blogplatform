@@ -11,7 +11,7 @@ export default function ArticleHeader({ article }) {
     <div className="article-header">
       <div className="article-header_name">
         <div className="name-container">
-          <Link to="/">
+          <Link to={`/${article.slug}`}>
             <h5 className="name">{article.title}</h5>
           </Link>
           <p className="likes-count">♡ {article.favoritesCount}</p>

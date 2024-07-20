@@ -14,6 +14,7 @@ const List = lazy(() => import("./pages/List/List"));
 import { articleLoader } from "./pages/List/List";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
+import Article, { articleDetailLoader } from "./pages/Article/Article";
 
 //layouts
 import RootLayout from "./layouts/RootLayout";
@@ -32,6 +33,15 @@ const router = createBrowserRouter(
           </Suspense>
         }
         loader={articleLoader}
+      />
+      <Route
+        path=":slug"
+        element={
+          <Suspense fallback={<Loader />}>
+            <Article />{" "}
+          </Suspense>
+        }
+        loader={articleDetailLoader}
       />
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
